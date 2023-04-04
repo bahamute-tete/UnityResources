@@ -19,7 +19,7 @@ namespace CMF
 		//Animation will only be triggered if downward velocity exceeds this threshold;
 		public float landVelocityThreshold = 5f;
 
-		private float smoothingFactor = 40f;
+		private float smoothingFactor = 40f; 
 		Vector3 oldMovementVelocity = Vector3.zero;
 
 		//Setup;
