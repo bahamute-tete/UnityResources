@@ -115,25 +115,16 @@ public class ChipManager : MonoBehaviour
             isDissovle = true;
             value = 0;
         });
+
+        //index = 4;
     }
 
 
 
     void FixedUpdate()
     {
-       
-        //if (Input.GetKeyDown(KeyCode.N))
-        //{
-        //    if (index > 0)
-        //        index--;
-        //    else
-        //        index = 4;
 
-        //    isDissovle = true;
-        //    value = 0;
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.M))
+        //if (Input.GetKeyDown(KeyCode.P))
         //{
         //    if (index < 4)
         //        index++;
