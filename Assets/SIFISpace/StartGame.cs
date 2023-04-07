@@ -2,7 +2,7 @@ using AmazingAssets.AdvancedDissolve;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using AmazingAssets.AdvancedDissolve;
+using UnityEngine.InputSystem;
 
 public class StartGame : MonoBehaviour
 {
@@ -32,6 +32,13 @@ public class StartGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var keyboard = Keyboard.current;
+
+        if (keyboard != null && keyboard.oKey.wasPressedThisFrame) 
+        {
+            isDissovle= true;
+        }
+        
         if (isDissovle)
         {
             CaculateTimeValue();

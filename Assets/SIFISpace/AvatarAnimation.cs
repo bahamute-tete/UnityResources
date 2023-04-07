@@ -13,11 +13,12 @@ public class AvatarAnimation : MonoBehaviour
 
     public UnityEvent unityEvent;
 
+    private float currentMoveSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        currentMoveSpeed = controller.movementSpeed;
     }
 
     // Update is called once per frame
@@ -26,6 +27,19 @@ public class AvatarAnimation : MonoBehaviour
 
         //animator.SetTrigger("OnLand");
         Vector3 _velocity = controller.GetVelocity();
+        float speed = _velocity.magnitude;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = Mathf.Clamp(speed, 0, 1f);
+            controller.movementSpeed = currentMoveSpeed;
+        }
+        else
+        {
+            speed = Mathf.Clamp(speed, 0, 0.3f);
+            controller.movementSpeed = currentMoveSpeed*0.5f;
+        }
+
+        
        
 
         _isGrounded = controller.IsGrounded();
@@ -38,13 +52,13 @@ public class AvatarAnimation : MonoBehaviour
 
         if (_velocity.y < 0.01f && _isGrounded)
         {
-            animator.SetFloat("Speed", _velocity.magnitude);
-            animator2.SetFloat("Speed", _velocity.magnitude);
-            animator3.SetFloat("Speed", _velocity.magnitude);
-            animator4.SetFloat("Speed", _velocity.magnitude);
+            animator.SetFloat("Speed",speed);
+            animator2.SetFloat("Speed", speed);
+            animator3.SetFloat("Speed", speed);
+            animator4.SetFloat("Speed", speed);
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             animator.SetTrigger("Greet");
             animator2.SetTrigger("Greet");
