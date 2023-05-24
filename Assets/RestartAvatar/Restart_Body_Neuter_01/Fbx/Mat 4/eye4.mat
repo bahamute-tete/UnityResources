@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-626902014167078243
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 5
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -20,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dress
+  m_Name: eye4
   m_Shader: {fileID: 4800000, guid: dcda956a6808f8c4e84b1460ad3ac6eb, type: 3}
   m_ValidKeywords:
   - _AD_CUTOUT_GEOMETRIC_TYPE_CUBE
@@ -29,6 +16,7 @@ Material:
   - _AD_EDGE_ADDITIONAL_COLOR_CUSTOM_MAP
   - _AD_EDGE_BASE_SOURCE_ALL
   - _EMISSION
+  - _RECEIVE_SHADOWS_OFF
   m_InvalidKeywords:
   - _AD_CUTOUT_GEOMETRIC_COUNT_ONE
   - _AD_EDGE_UV_DISTORTION_SOURCE_DEFAULT
@@ -65,7 +53,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 7e34eaa702c1547c49a3c02985ad2ee8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 44dc31322d6374e92bc549f7a1198a68, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -85,11 +73,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 7e34eaa702c1547c49a3c02985ad2ee8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 44dc31322d6374e92bc549f7a1198a68, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7e34eaa702c1547c49a3c02985ad2ee8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 44dc31322d6374e92bc549f7a1198a68, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -172,7 +160,8 @@ Material:
     - _AdvancedDissolveKeywordGlobalControlID: 0
     - _AdvancedDissolveKeywordState: 0
     - _AlphaClip: 0
-    - _Blend: 0
+    - _Blend: 1
+    - _BlendOp: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -184,15 +173,20 @@ Material:
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.14142135
+    - _GlossinessSource: 0
     - _GlossyReflections: 1
-    - _Metallic: 0.333
+    - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
-    - _Smoothness: 0.084
+    - _ReceiveShadows: 0
+    - _SampleGI: 0
+    - _Shininess: 0
+    - _Smoothness: 0
+    - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
+    - _SpecSource: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
@@ -201,7 +195,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AdvancedDissolveBakedKeywords: {r: 0, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveCutoutGeometric1Normal: {r: 1.0000001, g: -0.00000011920929,
+    - _AdvancedDissolveCutoutGeometric1Normal: {r: -1.0000001, g: -0.00000011920929,
         b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric1Position: {r: 15, g: 4.083, b: 0.02399993,
         a: 0}
@@ -233,6 +227,19 @@ Material:
     - _AdvancedDissolveEdgeUVDistortionMapTiling: {r: 1, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+    - _EmissionColor: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
+--- !u!114 &2293466309281899135
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5

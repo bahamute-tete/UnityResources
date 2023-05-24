@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dress
+  m_Name: dress4
   m_Shader: {fileID: 4800000, guid: dcda956a6808f8c4e84b1460ad3ac6eb, type: 3}
   m_ValidKeywords:
   - _AD_CUTOUT_GEOMETRIC_TYPE_CUBE
@@ -201,7 +201,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AdvancedDissolveBakedKeywords: {r: 0, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveCutoutGeometric1Normal: {r: 1.0000001, g: -0.00000011920929,
+    - _AdvancedDissolveCutoutGeometric1Normal: {r: -1.0000001, g: -0.00000011920929,
         b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric1Position: {r: 15, g: 4.083, b: 0.02399993,
         a: 0}

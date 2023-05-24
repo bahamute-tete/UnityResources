@@ -58,6 +58,14 @@ public class CustomCharactor : MonoBehaviour
         PlayIdleClips();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            PlayGreetClips();
+        }
+    }
+
     void InitialHairTransform(GameObject hair)
     {
         hair.transform.localPosition = Vector3.zero;
