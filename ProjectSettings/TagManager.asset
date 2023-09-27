@@ -6,6 +6,8 @@ TagManager:
   tags:
   - TestHair
   - HairTGD
+  - frame
+  - frameVideo
   layers:
   - Default
   - TransparentFX

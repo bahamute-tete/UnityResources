@@ -1,0 +1,19 @@
+To use the post processing : juste download the post processing stack on the asset store,
+it's free! 
+
+Then just go in the 04-Post-Processing Profile folder to find the profile I used and link it to your camera.
+
+You can drag and drop the prefab directly into your scene or use the scene exemple_day or night.
+
+Optimisation :
+The lights are in realtime, if you want better performances you may use the baking option (click on the
+lights and then change the mode from realtime to baked), you can also change the resolution of the textures in the import options 
+(click on the texture and change the max size, you can also change the compression and use the crunch compression).
+
+
+If you have any questions, feel free to contact Nauthilus Games :
+
+nauthilusgames@gmail.com
+
+Thanks for your purchase!
+
